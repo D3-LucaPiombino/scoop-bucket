@@ -53,7 +53,7 @@ process {
             # TODO: Yaml
             # $manifest = Get-Content $man -Raw -Encoding UTF8 | ConvertFrom-Yaml -Ordered
             [psobject] $manifest = Get-Content $man -Raw -Encoding UTF8 | ConvertFrom-Json
-            $message = "$noExt`: Bumped to $($manifest.version)"
+            $message = "Update $noExt to $($manifest.version)"
 
             if ($Hashes) { $message = "${noExt}: Fixed hashes" }
 
